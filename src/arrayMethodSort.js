@@ -5,7 +5,8 @@
  */
 function applyCustomSort() {
   [].__proto__.sort2 = function (
-    compareFunction = (a, b) => a.toString() > b.toString(),
+    compareFunction = (a, b) =>
+      a.toString() > b.toString() ? 1 : a.toString() < b.toString() ? -1 : 0,
   ) {
     let isSwapped;
 
